@@ -16,17 +16,18 @@ function play() {
     video[method]();            
 }
 
-function updateBtn(){
-    const change = this.paused ? "►" : "❚ ❚"; 
+function updateBtn() {
+    const change = this.paused ? "►" : "❚❚"; 
     toggle.textContent = change;
 }
 
-function skip(){
-    console.log(this.dataset.skip);
+function skip() {
     video.currentTime += parseFloat(this.dataset.skip)
 }
 
-
+function slide() {
+    video[this.name] = this.value
+}
 
 
 
@@ -39,4 +40,6 @@ toggle.addEventListener("click", play);
 video.addEventListener("play", updateBtn);
 video.addEventListener("pause", updateBtn);
 
-skipButtons.forEach(btn => btn.addEventListener("click", skip))
+skipButtons.forEach(btn => btn.addEventListener("click", skip));
+
+range.forEach(inp => inp.addEventListener("mousemove", slide))

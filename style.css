@@ -1,4 +1,24 @@
 .player{
     text-align: center;
-    margin-top: 100px;
+    margin-top: 10%;
+}
+
+.player_controls{ 
+    display: flex;
+    justify-content: center;
+    
+ } 
+
+.button{
+    width: 60px;
+    height: 40px;
+    font-size: large;
+}
+.progress{
+    background-color: red;
+    height: 5px;
+}
+
+.toggle{
+    margin-right: 50px;
 }
