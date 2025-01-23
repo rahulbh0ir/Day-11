@@ -7,6 +7,7 @@ const bar = player.querySelector(".progress__filled");
 const toggle = player.querySelector(".toggle");
 const skipButtons = player.querySelectorAll("[data-skip]");
 const range = player.querySelectorAll(".player__slider");
+const fullscreen = player.querySelector(".full");
 let move = false;
 
 //Call Functions
@@ -52,17 +53,23 @@ function keys(e){
     }
 }
 
+function full() {
+    video.requestFullscreen()
+}
+
 //Adding Event Listeners
 
 
 video.addEventListener("click", play);
 video.addEventListener("play", updateBtn);
 video.addEventListener("pause", updateBtn);
-video.addEventListener("timeupdate", handleProgress)
+video.addEventListener("timeupdate", handleProgress);
+
 
 toggle.addEventListener("click", play);
 
 skipButtons.forEach(btn => btn.addEventListener("click", skip));
+fullscreen.addEventListener("click", full)
 
 range.forEach(inp => inp.addEventListener("mousemove", slide));
 
