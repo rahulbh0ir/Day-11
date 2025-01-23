@@ -67,7 +67,7 @@ skipButtons.forEach(btn => btn.addEventListener("click", skip));
 range.forEach(inp => inp.addEventListener("mousemove", slide));
 
 progress.addEventListener("click", scrub);
-progress.addEventListener("mousemove", (e) => {if(move){scrub(e)}});
+progress.addEventListener("mousemove", (e) => move && scrub(e));
 progress.addEventListener("mousedown", () => {move = true});
 progress.addEventListener("mouseup", () => {move = false});
 
