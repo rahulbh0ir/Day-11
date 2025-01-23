@@ -94,14 +94,14 @@ html {
     height: 5px;
     transition: height 0.3s;
     background: rgba(0,0,0,0.5);
-    cursor: ew-resize;
+    cursor: pointer;
   }
   
   .progress__filled {
     width: 50%;
     background: yellowgreen;
     flex: 0;
-    flex-basis: 50%;
+    flex-basis: 1%;
   }
   
   /* unholy css to style input type="range" */
@@ -131,7 +131,7 @@ html {
     height: 15px;
     width: 15px;
     border-radius: 50px;
-    background: lightsalmon;
+    background: magenta;
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -3.5px;
